@@ -6,14 +6,7 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Q2178 {
-	static class Point{
-		int x;
-		int y;
-		public Point(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
-	}
+	
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
