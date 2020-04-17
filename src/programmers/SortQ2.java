@@ -3,7 +3,7 @@ package programmers;
 public class SortQ2 {
 
 	public static void main(String[] args) {
-		int[] numbers = {141,151,101,102,101};
+		int[] numbers = {141,151,101,102};
 		int size = numbers.length;
         String[] strArr = new String[size];
         for(int i = 0 ; i< size; i++){
