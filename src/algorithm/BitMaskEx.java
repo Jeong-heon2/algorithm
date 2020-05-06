@@ -49,6 +49,9 @@ public class BitMaskEx {
 		
 		System.out.println(bitCount(15));// 1111 ÃÑ 4°³
 		
+		int k = 0 ;
+		k = k | (1 << 3);
+		System.out.println(k);
 		
 	}
 	//1ÀÇ °¹¼ö ¼¼±â
