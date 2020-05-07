@@ -43,6 +43,8 @@ public class StringMethodEx {
 		s1 = "ABCDEFG";
 		System.out.println(s1.substring(0,3));
 		//ABC 
+		System.out.println(s1.substring(1,1));
+		System.out.println(s1.substring(1));
 		
 		//split()
 		//지정한 문자로 문자열을 나눌 수 있다. 결과 값은 배열로 반환

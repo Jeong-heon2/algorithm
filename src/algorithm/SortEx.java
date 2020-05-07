@@ -53,6 +53,7 @@ public class SortEx {
 		for(CompareToEx cte : ctArr) {
 			System.out.println(cte.num);
 		}
+		//출력  1 2 
 		
 	}
 	static class CompareToEx implements Comparable<CompareToEx>{
@@ -60,13 +61,12 @@ public class SortEx {
 		public CompareToEx(int num) {
 			this.num = num;
 		}
+		//Arrays.sort  ,  Cellections.sort 할대 이 메서드가 사용된다
 		@Override
 		public int compareTo(CompareToEx arg0) {
 			if(num > arg0.num) return 1;//큰 순으로 오름차순 정렬
 			else if(num == arg0.num) return 0;
 			else return -1;
 		}
-		
 	}
-
 }
