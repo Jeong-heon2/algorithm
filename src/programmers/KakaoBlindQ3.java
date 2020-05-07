@@ -23,6 +23,7 @@ key와 lock의 원소는 0 또는 1로 이루어져 있습니다.
  */
 
 //열쇠 돌기와 자물쇠 돌기가 만나서는 안된다는 조건을 빼먹음 05.07
+//다시 조건 추가함 05.07 
 public class KakaoBlindQ3 {
 
 	public static void main(String[] args) {
@@ -51,13 +52,14 @@ public class KakaoBlindQ3 {
                     //rotatedKey를 map에 입힌다
                     int[][] copyMap = deepCopy(map,mapSize);
                     idx=0;
-                    
                     for(int s = i ; s < i+M ; s++){
                     	int idx2 = 0;
                     	for(int v = j ; v < j+M; v++) {
                     		if(key[idx][idx2] == 1) {
                     			//열쇠돌기와 자물쇠돌기는 만나면 안되므로
-                    			if(copyMap[s][v] != 1) {
+                    			if(copyMap[s][v] == 1) {
+                    				copyMap[s][v] = 0;
+                    			}else {
                     				copyMap[s][v] = 1;
                     			}
                     			
@@ -65,7 +67,6 @@ public class KakaoBlindQ3 {
                     		idx2++;
                     	}
                     	idx++;
-
                     }
                     if(checkMatch(copyMap,M,N)) {
                     	return true;
