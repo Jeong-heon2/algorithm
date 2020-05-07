@@ -27,8 +27,8 @@ public class KakaoBlindQ3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] key = new int[][] {{0,0,0},{1,0,0},{0,1,1}};
-		int[][] lock = new int[][] {{1,1,1},{1,1,0},{1,0,1}};
+		int[][] key = new int[][]{{0, 0}, {1, 0}};
+        int[][] lock = new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
 		System.out.println(solution(key,lock));
 	}
 	public static boolean solution(int[][] key, int[][] lock) {
@@ -51,16 +51,25 @@ public class KakaoBlindQ3 {
                     //rotatedKey를 map에 입힌다
                     int[][] copyMap = deepCopy(map,mapSize);
                     idx=0;
-                    int idx2 = 0;
+                    
                     for(int s = i ; s < i+M ; s++){
+                    	int idx2 = 0;
                     	for(int v = j ; v < j+M; v++) {
                     		if(key[idx][idx2] == 1) {
-                    			copyMap[s][v] = 1;
+                    			//열쇠돌기와 자물쇠돌기는 만나면 안되므로
+                    			if(copyMap[s][v] != 1) {
+                    				copyMap[s][v] = 1;
+                    			}
+                    			
                     		}
+                    		idx2++;
                     	}
+                    	idx++;
 
                     }
-                    if(checkMatch(copyMap,M,N)) return true;
+                    if(checkMatch(copyMap,M,N)) {
+                    	return true;
+                    }
                 }
             }
         }
