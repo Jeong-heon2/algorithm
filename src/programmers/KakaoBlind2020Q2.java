@@ -5,7 +5,7 @@ package programmers;
 //참고해서 풀었다.
 
 //u,v로 분리하는 방법을 찾는 것이 가장 어려웠다.
-public class KakaoBlind2019Q2 {
+public class KakaoBlind2020Q2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
