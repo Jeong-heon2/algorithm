@@ -41,7 +41,7 @@ public class BitMaskEx {
 		System.out.println(31 & 11110);//얘도 6..
 		
 		//0번째 비트 값 알아내기
-		c = 10;
+		c = 223;
 		System.out.println(c & (1 << 0));// 0
 		//1번째 비트 값 알아내기
 		System.out.println(c & (1 << 1));// 10  > 2의 1승  ,
