@@ -16,7 +16,7 @@ k는 1 이상 number의 자릿수 미만인 자연수입니다.
 public class GreedyQ2 {
 	static int ans = 0;
 	public static void main(String[] args) {
-		System.out.println(solution("11111999", 4));
+		System.out.println(solution("1111", 2));
 	}
 	
     public static String solution(String number, int k) {
