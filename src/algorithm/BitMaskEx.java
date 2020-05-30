@@ -32,8 +32,9 @@ public class BitMaskEx {
 		System.out.println(1010|0001);//1011 , 11
 		
 		//0번쨰 비트 값을 0으로 변경하기
-		c = 15;//1111
-		System.out.println(c & ~1 << 0); //1110, 14
+		c = 3;//1111
+	    c &= ~(1<<1);
+		System.out.println(c); //1110, 14
 		System.out.println(1111 & 1110);// 1110, 14
 		//주의!!!!
 		System.out.println(c & 1110);//얘는 6으로 나옴,, 
@@ -41,8 +42,8 @@ public class BitMaskEx {
 		System.out.println(31 & 11110);//얘도 6..
 		
 		//0번째 비트 값 알아내기
-		c = 223;
-		System.out.println(c & (1 << 0));// 0
+		c = 3;
+		System.out.println(c & (1 << 1));// 0
 		//1번째 비트 값 알아내기
 		System.out.println(c & (1 << 1));// 10  > 2의 1승  ,
 		//즉 1번째 비트값이 켜져있다.
