@@ -19,6 +19,7 @@ public class UnionFind {
 		union(2,3);
 		System.out.println("3의 부모는? : " + find(3));//1
 		System.out.println("1과 3은 연결되어 있나요? : " + isSameParent(1,3));//true
+		System.out.println("2와 3은? : " + isSameParent(2, 3));
 		
 	}
 	
