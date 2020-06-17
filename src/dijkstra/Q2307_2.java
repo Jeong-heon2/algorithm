@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-/*도로 검
+/*도로 검문
 1.최소경로, 최소경로의 비용 을 모두 구한다음
 2.최소경로에 포함된 에지들만 하나씩 제외하고 다시 다익스트라를 돌려서 최소비용을 구한다.
 2에서 나온 비용의 최대값을 구한 후, 최소 경로와 빼주면 정답.
@@ -42,6 +42,7 @@ public class Q2307_2 {
 			for(Edge e : arr[edge.to]) {
 				if(dist[e.to] > dist[edge.to] + e.w) {
 					dist[e.to] = dist[edge.to] + e.w;
+					//경로도 업데이트
 					path[e.to] = edge.to;
 					pq.offer(new Edge(e.to, dist[e.to]));
 				}
@@ -49,10 +50,13 @@ public class Q2307_2 {
 		}
 		min = dist[N];
 		//최소 경로 : path , 최소경로 가중치 : min
+		//path[i] = j 일때 , 최소 경로를 통해 i노드를 방문하기 위해서는 j노드 > i노드로 방문해야한다.
+		
 		
 		int to = N;
 		int max = 0;
 		do {
+			//from 노드와 to 노드를 잇는 간선을 이번 라운드에서 제외시킨다. 
 			int from = path[to];
 			Arrays.fill(dist, Integer.MAX_VALUE);
 			dist[1] = 0;
