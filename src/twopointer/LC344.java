@@ -19,6 +19,7 @@ public class LC344 {
             left++;
             right--;
         }
+        
     }
 
 }
