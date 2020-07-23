@@ -5,7 +5,6 @@ public class Combination {
 	public static void main(String[] args) {
 		int[] arr= {1,2,3,4};
 		boolean[] visited = new boolean[arr.length];
-		combination(arr,visited,0,arr.length, 2);
 		for(int i = 1 ; i <= arr.length ; i ++) {
 			combination(arr,visited,0,arr.length,i);
 		}
