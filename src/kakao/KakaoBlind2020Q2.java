@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 //괄호 변환
 //국어를 잘해야하는 문제,,
 //https://keepgoing0328.tistory.com/entry/2020%EC%B9%B4%EC%B9%B4%EC%98%A4-%EA%B3%B5%EC%B1%84-%EA%B4%84%ED%98%B8-%EB%B3%80%ED%99%98-%EC%9E%90%EB%B0%94

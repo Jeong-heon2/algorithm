@@ -1,4 +1,4 @@
-package string;
+package kakao;
 /*
 카카오 2020 recruitment 문자열 압축
 문자열 , 배열 인덱스 헷갈리는 문제 

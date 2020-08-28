@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 //호텔 방배정
 //방이 총 k개  1~ k번
 //초기에 모든 방은 비어잇다.

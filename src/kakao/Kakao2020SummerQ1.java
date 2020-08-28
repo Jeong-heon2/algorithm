@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 
 
 public class Kakao2020SummerQ1 {

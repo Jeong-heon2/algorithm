@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 
 /*
  와일드카드 문자인 '?'는 글자 하나를 의미하며, 어떤 문자에도 매치된다고 가정합니다.

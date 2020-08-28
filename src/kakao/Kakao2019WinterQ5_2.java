@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 //블로그에서 가져온 풀이
 //출처 : https://iron-jin.tistory.com/entry/2019-카카오-개발자-겨울-인턴십-코딩테스트-징검다리-건너기feat-Java
 //나랑 접근법이 비슷했다

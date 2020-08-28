@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 
 import java.util.ArrayList;
 //해결방법을 찾는 것도 어려웠고 구현도 어려웠다.

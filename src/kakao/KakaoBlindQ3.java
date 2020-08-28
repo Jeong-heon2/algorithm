@@ -1,4 +1,4 @@
-package programmers;
+package kakao;
 /*
  * 잠겨있는 자물쇠는 격자 한 칸의 크기가 1 x 1인 N x N 크기의 정사각 격자 형태이고 
  * 특이한 모양의 열쇠는 M x M 크기인 정사각 격자 형태로 되어 있습니다.
