@@ -54,6 +54,17 @@ public class BitMaskEx {
 		k = k | (1 << 3);
 		System.out.println(k);
 		
+		int visited = 8; // 1111 
+		int key = 2; // 10
+		
+		System.out.println(Integer.highestOneBit(key));
+		int len = visited;
+		for(int i = 0 ; len > 0 ; i++, len = len/2) {
+			System.out.println("i : " + i);
+			System.out.println(key & (1 << i));
+			System.out.println(visited & (1 << i));
+		}
+		
 	}
 	//1ÀÇ °¹¼ö ¼¼±â
 	public static int bitCount(int n ) {
