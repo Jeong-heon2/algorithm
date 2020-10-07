@@ -10,11 +10,14 @@ import java.util.Comparator;
 public class SortEx {
 
 	public static void main(String[] args) {
-		String[] arr = { "bananas","apple", "cookie"};
+		String[] arr = { "F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat"};
 		Arrays.sort(arr);
 		for(String str : arr) {
 			System.out.println(str);
 		}
+		String a = "a-10 a";
+		String b = "a-10 b";
+		System.out.println("음수면 a 가 사전순으로 더 앞." + a.compareTo(b));
 		// 출력 : apple banana cookie
 		// 원래는 사전 순서로 출력되도록 되어잇음
 		
