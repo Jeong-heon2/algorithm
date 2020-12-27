@@ -1,5 +1,6 @@
 package algorithm;
 //순열 알고리즘 (재귀)
+//https://minusi.tistory.com/entry/%EC%88%9C%EC%97%B4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-Permutation-Algorithm
 public class Permutation {
 
 	public static void main(String[] args) {

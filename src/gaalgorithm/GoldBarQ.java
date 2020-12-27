@@ -124,17 +124,6 @@ public class GoldBarQ {
 		    			swap(selected_chr[0], selected_chr[1], i);
 		    		}
 		    		if(cnt == 0) break;
-		    		/*
-		    		if(selected_chr[0].code[i] != selected_chr[1].code[i]) {
-		    			swap(selected_chr[0], selected_chr[1], i);
-			    		if(checkSum(selected_chr[0]) && checkSum(selected_chr[1])) {
-			    			//둘다 sum <= maxsum
-			    			cnt--;
-			    		}else {
-			    			swap(selected_chr[0], selected_chr[1], i);
-			    		}
-			    		if(cnt == 0) break;
-		    		}*/
 		    	}
 		    	if(cnt <= 1) {
 		    		//하나라도 교환이 되었다면 
@@ -173,14 +162,7 @@ public class GoldBarQ {
 				population[i] = null;
 			}
 		}
-		class Gold{
-			int w;
-			int v;
-			public Gold(int w, int v) {
-				this.w = w;
-				this.v = v;
-			}
-		}
+		
 		class Chromosome implements Comparable<Chromosome>, Cloneable{
 			int sum = 0;
 			int val = 0;
@@ -210,6 +192,14 @@ public class GoldBarQ {
 				return ch;		
 			}
 			
+		}
+		class Gold{
+			int w;
+			int v;
+			public Gold(int w, int v) {
+				this.w = w;
+				this.v = v;
+			}
 		}
 		public void makeGold() {
 			this.golds = new Gold[6];

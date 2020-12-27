@@ -25,7 +25,8 @@ public class Dijkstra {
         visit =new boolean[V +1];// 방문 했나 안했나
                  
         // 각 정점의 연결된 간선을 저장
-        ArrayList<Edge>[] a = (ArrayList<Edge>[])new ArrayList[V +1];
+        @SuppressWarnings("unchecked")
+		ArrayList<Edge>[] a = (ArrayList<Edge>[])new ArrayList[V +1];
         for (int i =1; i <= V; i++) {
             dist[i] = INF;// 모든 정점은 일단 무한
             a[i] =new ArrayList<Edge>();
@@ -39,12 +40,12 @@ public class Dijkstra {
             a[u].add(new Edge(v, w));
         }
         sc.close();
-        PriorityQueue<Edge> pq =new PriorityQueue<Edge>();// 우선순위 큐
+        PriorityQueue<Edge> pq = new PriorityQueue<Edge>();// 우선순위 큐
         pq.offer(new Edge(K,0));//시작 정점을 우선순위 큐에 넣음.
  
         while (!pq.isEmpty()) {
             Edge e = pq.poll();// 큐에 들어있는 간선중 가장 가중치가 낮은 것 찾음.
-            if (visit[e.dest] ==true) {
+            if (visit[e.dest]) {
                 continue;
             }
             visit[e.dest] =true;

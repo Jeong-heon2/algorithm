@@ -35,6 +35,7 @@ public class Q10282 {
 			int c = Integer.parseInt(st.nextToken());
 			
 			dist = new int[n+1];
+			@SuppressWarnings("unchecked")
 			ArrayList<Edge>[] arr = (ArrayList<Edge>[])new ArrayList[n+1];
 			for(int i = 1 ; i <= n ; i ++) {
 				arr[i] = new ArrayList<>();
@@ -84,5 +85,4 @@ public class Q10282 {
 			return this.w - o.w ;
 		}
 	}
-
 }
