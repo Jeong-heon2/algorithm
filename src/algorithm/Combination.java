@@ -8,8 +8,6 @@ public class Combination {
 		for(int i = 1 ; i <= arr.length ; i ++) {
 			combination(arr,visited,0,arr.length,i);
 		}
-		
-
 	}
 	// 백트래킹 사용
 	// 사용 예시 : combination(arr, visited, 0, n, r)
@@ -17,7 +15,6 @@ public class Combination {
 	    if(r == 0) {
 	        print(arr,visited,n);
 	        return;
-	        
 	    } 
 	    for(int i=start; i<n; i++) {
 	        visited[i] = true;
