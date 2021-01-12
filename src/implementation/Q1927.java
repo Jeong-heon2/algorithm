@@ -36,7 +36,9 @@ public class Q1927 {
 			int pos = heap.size() - 1;
 			//노드의 부모의 인덱스는 항상  pos/2 
 			int parent = pos/2;
+			//부모가 더 작아야함 (최소힙) 
 			while(pos > 1 && heap.get(parent) > heap.get(pos)) {
+				//swap 
 				int temp = heap.get(parent);
 				heap.set(parent, heap.get(pos));
 				heap.set(pos, temp);
@@ -45,15 +47,17 @@ public class Q1927 {
 				parent = pos/2;
 			}
 		}
+		//루트 노드를 삭제하고  삭제한 데이터를 리턴 
 		public int delete() {
 			//heap이 비어있을 때
 			if(heap.size() - 1 == 0) {
 				return 0;
 			}
-			
+			//지울 데이터 (루트 ) 
 			int deleteData = heap.get(1);
-			
+			//말단 노드를 부모 노드로 세팅 
 			heap.set(1, heap.get(heap.size() -1));
+			//말단 노드 삭제 
 			heap.remove(heap.size() - 1);
 			
 			int pos = 1;
@@ -68,7 +72,7 @@ public class Q1927 {
 					min = heap.get(rPos);
 					minPos = rPos;
 				}
-				//더 작은 값과 현재 노드 비교 
+				//더 작은 값과 현재 노드(루트) 비교 
 				if(heap.get(pos) < min) break; //최소힙 만족 
 				//swap
 				int tmp = heap.get(pos);

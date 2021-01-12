@@ -11,7 +11,7 @@ public class Q1963 {
 	static int[] arr = new int[10000];
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+		//9999까지의 소수를 미리 생성 
 		//에라토스테네스의 체 
 		// 1. 배열을 생성하여 초기화한다.
 	    for(int i=2; i<=num; i++) {
@@ -27,7 +27,7 @@ public class Q1963 {
 	            arr[j] = 0;
 	        }
 	    }
-	    
+	    //입력 받기 
 		//test case
 		int T = Integer.parseInt(br.readLine());
 		
@@ -48,13 +48,17 @@ public class Q1963 {
 			int qSize = q.size();
 			while(qSize-- > 0) {
 				int cur = q.poll();
+				//한 자리를 바꿔서 나올수 있는 모든 경우의 수 
+				//각 자리수 마다 
 				for(int i = 0 ; i < 4 ; i++) {
 					StringBuilder sb = new StringBuilder(String.valueOf(cur));
+					//0~9로 변경할 수 있다. 
 					for(int j = 0; j <= 9 ; j++) {
 						sb.setCharAt(i, (char)(j+'0'));
 						int next = Integer.parseInt(sb.toString());
 						//방문한적 없고 소수라면 
 						if(next >= 1000 && !visited[next] && arr[next] != 0) {
+							//찾는 수라면 바로 리턴 
 							if(next == target) return ++cnt;
 							visited[next] = true;
 							q.add(next);

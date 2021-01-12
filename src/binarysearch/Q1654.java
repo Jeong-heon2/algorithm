@@ -2,7 +2,7 @@ package binarysearch;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+//이분탐색 문제인지 모르고 풀면 어려운 문제 
 public class Q1654 {
 
 	public static void main(String[] args) throws Exception{
@@ -21,8 +21,9 @@ public class Q1654 {
 		long left = 1;
 		long right = init;
 		long mid = init;
-		long max = 0;
+		long max = 0;//최대 길이를 출력해야 한다. 
 		while(left <= right) {
+			//mid 길이로 쪼갰을 때 나오는  조각 수 
 			if(slice(mid, arr) >= N) {
 				max =  Math.max(mid, max);
 				left = mid + 1;

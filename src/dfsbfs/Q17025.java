@@ -52,6 +52,7 @@ public class Q17025 {
 		int[] res = {1,0};// [0] : area ,  [1] : perimeter 
 		while(q.size() > 0) {
 			Point cur = q.poll();
+			//동서남북 조사 
 			for(int i = 0 ; i < 4 ; i++) {
 				Point next = new Point(cur.x + goX[i] , cur.y + goY[i]);
 				if(!isRanged(next)) {//벽 
