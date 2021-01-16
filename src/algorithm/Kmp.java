@@ -6,7 +6,7 @@ public class Kmp {
 		// TODO Auto-generated method stub
 		String s = "abcabdabcabcabef";
 		final int sLen = s.length();
-		String t = "abcabe";
+		String t = "ff";
 		final int tLen = t.length();
 		int j = 0;
 		int[] pi = failFunc(t);
