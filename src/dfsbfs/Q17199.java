@@ -23,7 +23,7 @@ public class Q17199 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			arr[b].add(a);
+			arr[b].add(a);// a -> b    
 		}
 		int ans = 0;
 		for(int i = 1; i <= N ; i++) {

@@ -31,10 +31,12 @@ public class Q18428 {
 		}
 		
 		boolean[] visited = new boolean[emt_list.size()];
+		//장애물이 설치 될 3자리 -> 모든 경우의 수 구하기  (조합 알고리즘) 
 		combination(emt_list, visited, 0, emt_list.size(), 3);
 		if(ans) System.out.println("YES");
 		else System.out.println("NO");
 	}
+	//감시를 피했는지 체크 
 	static boolean check() {
 		for(Point sd : st_list) {
 			for(int i = 0 ; i < 4 ; i++) {
