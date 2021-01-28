@@ -62,9 +62,9 @@ public class Q20056_2 {
 			// 이동
 			for(int i=1; i<=N; i++) {
 				for(int j=1; j<=N; j++) {
-					if(map[i][j].size() != 0) {
+					if(map[i][j].size() != 0) {//파이어볼이 들어있으면 
 						for(int t=0; t<map[i][j].size(); t++) {
-							FireBall fb = map[i][j].get(t);
+							FireBall fb = map[i][j].get(t);//파이어볼을 하나씩 꺼낸다 
 							
 							int dx = j + dX[fb.dir]*fb.vel % N;
 							int dy = i + dY[fb.dir]*fb.vel % N;
@@ -74,7 +74,7 @@ public class Q20056_2 {
 								dx = dx % N;
 							}
 							else if(dx < 1) {
-								dx = N - (Math.abs(dx) % N);
+								dx = N - (Math.abs(dx) % N);// 격자의 1번 행또는열은 N번 행또는 열과 연결되어있다 
 							}
 							
 							if(dy > N) {
