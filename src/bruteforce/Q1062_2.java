@@ -11,6 +11,7 @@ public class Q1062_2 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] tmp = br.readLine().split(" ");
 		ans = 0;
+		// 0 : a  1 : b ... 
 		boolean[] dic = new boolean[26];
 		N = Integer.parseInt(tmp[0]);
 		int K = Integer.parseInt(tmp[1]);

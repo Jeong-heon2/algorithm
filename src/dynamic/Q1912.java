@@ -19,6 +19,7 @@ public class Q1912 {
 		int ans = dp[0];
 		
 		for(int i = 1 ; i < N ; i++) {
+			//dp[i] -> 0부터 i까지 구간 최대 합 
 			dp[i] = Math.max(dp[i-1] + arr[i], arr[i]);// arr[i]가 더 크면 구간을 다시 시작 
 			ans = Math.max(dp[i], ans);
 		}
