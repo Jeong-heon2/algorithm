@@ -1,8 +1,10 @@
 package unionfind;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
@@ -17,10 +19,11 @@ import java.util.StringTokenizer;
 친구 관계가 생길 때마다, 두 사람의 친구 네트워크에 몇 명이 있는지 구하는 프로그램을 작성하시오.
  */
 public class Q4195 {
-	static int[] parents;//부모 노
+	static int[] parents;//부모 노드 
 	static int[] cnt;//자식이 몇명인지(나를 포함)
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		//test case 
 		int T = Integer.parseInt(br.readLine());
 		while(T-- > 0) {
@@ -55,11 +58,13 @@ public class Q4195 {
 					map.put(f2, idx++);
 				}else f2_idx = map.get(f2);
 				
-				System.out.println(union(f1_idx, f2_idx));
+				bw.write(union(f1_idx, f2_idx) + "\n");
 				
 			}
-			
+			bw.flush();
 		}
+		br.close();
+		bw.close();
 	}
 	private static int find(int x) {
 		if(parents[x] == x) {
