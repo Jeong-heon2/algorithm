@@ -38,12 +38,10 @@ public class Q2252 {
             }
         }
         while(q.size() > 0){
-            bw.write(q.peek()+ " ");
             int current = q.poll();
-            
+            bw.write(current+ " ");
             //다음 노드들을 방문하여  indegree -1 해주고 만약 0이면 큐에 넣는다. 
-            for(int i=0; i<list[current].size(); i++){
-                int next = list[current].get(i);
+            for(int next : list[current]){
                 indegree[next]--;
                 if(indegree[next]==0){
                     q.add(next);
