@@ -42,7 +42,7 @@ public class Q17471 {
 	}
 	private static void combi(boolean[] visited, int start, int r) {
 		if(r==0) {
-			//선거구 1 : true  선거구 2 : false 
+			//선거구 1 : visited가 true인 구역들   선거구 2 : false 인 구역들  
 			boolean flag1 = false;
 			boolean flag2 = false;
 			for(int i = 1 ; i <= N ;i++) {
