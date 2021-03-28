@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayInputConvert {
@@ -8,7 +9,7 @@ public class ArrayInputConvert {
 		str = str.replace("[", "{");
 		str = str.replace("]", "}");
 		
-		List<Integer> list = new ArrayList<>();
+		
 		
 		return str;
 	}
