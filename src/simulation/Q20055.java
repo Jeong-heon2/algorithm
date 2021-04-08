@@ -49,8 +49,7 @@ public class Q20055 {
 		upDq.offer(n2_belt);
 	}
 	private static void moveRobot() {
-		//N칸의 로봇은 움직일 수 없음  그냥 바로 poll하고 offer 
-		//pollLast가 움직여야 할 칸
+		//N칸의 로봇은 움직일 수 없음  그냥 바로 poll하고 로봇내리고  offer 
 		Belt lastBelt = upDq.poll();//N자리 
 		//로봇내리기 
 		lastBelt.robot = false;
@@ -81,7 +80,6 @@ public class Q20055 {
 	}
 	private static boolean check() {
 		//내구도 0인칸의 개수가 K개 이상인가? 
-		//전체 poll하고 다시 offer 해서 개수 체크 
 		int count = 0;
 		Iterator<Belt> upItr = upDq.iterator();
 		while(upItr.hasNext()) {
