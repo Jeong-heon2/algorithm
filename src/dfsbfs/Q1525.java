@@ -55,6 +55,7 @@ public class Q1525 {
 			}
 		}
 	}
+	//brute force 
 	private static void bfs(String str, int x) {
 		Queue<String> q = new LinkedList<>();
 		q.offer(str);
