@@ -3,7 +3,7 @@ package algorithm;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-
+//https://bcp0109.tistory.com/entry/%EC%9C%84%EC%83%81%EC%A0%95%EB%A0%AC-Topological-Sort-Java
 public class Topological {
 	static int n;
     static int e;
