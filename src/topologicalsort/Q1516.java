@@ -37,7 +37,9 @@ public class Q1516 {
 				int node = Integer.parseInt(st.nextToken());
 				if(node == -1) break;
 				//node가 i를 가리킴 
+				//i번 건물을 짓기 전에 node 건물이 지어야 함.  
 				arr[node].add(i);
+				//i번 건물을 짓기전에 먼저 지어져야할 건물의 개수 
 				indegree[i]++;
 			}
 		}

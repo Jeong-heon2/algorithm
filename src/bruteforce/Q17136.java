@@ -41,19 +41,24 @@ public class Q17136 {
 			System.out.println(ans);
 		}
 	}
+	//brute force , back tracking 
 	//지운 1의 개수 : cnt ,   사용한 색종이 개수 : paper 
 	private static void dfs(int x, int y, int cnt, int paper) {
+		//i는 붙일 색종이 사이즈 
 		for(int i = 1; i <=5 ; i++) {
 			if(papersCnt[i] > 0) {
 				if(check(x,y,i)) {
+					//색종이 붙이기 
 					setMap(x,y,i,0);
 					papersCnt[i]--;
+					//1을 다가렸는가?
 					if(cnt1 == cnt + i*i) {
 						ans = Math.min(ans, paper+1);
 						setMap(x,y,i,1);
 						papersCnt[i]++;
 						continue;
 					}
+					//다음 1이 있는 위치 찾기 
 					int[] next = findNext(x, y);
 					dfs(next[1], next[0], cnt + i*i, paper + 1);
 					setMap(x,y,i,1);
@@ -77,11 +82,13 @@ public class Q17136 {
 		}
 		return next;
 	}
+	//map에 size 크기의 색종이를 붙여도 되는 가 ? 
 	private static boolean check(int x, int y, int size) {
 		for(int i = y ; i < y+size ; i++) {
 			for(int j = x ; j < x + size ; j++) {
 				//색종이는 경계밖으로 나가면 안 된다 
 				if(i >= 10 || j >= 10) return false;
+				//0위에 색종이가 있으면 안 된다. 
 				if(map[i][j] == 0) return false;
 			}
 		}
