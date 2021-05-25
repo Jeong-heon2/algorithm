@@ -42,10 +42,10 @@ public class BitMaskEx {
 		System.out.println(31 & 11110);//얘도 6..
 		
 		//0번째 비트 값 알아내기
-		c = 3;
+		c = 15;
 		System.out.println(c & (1 << 1));// 0
 		//1번째 비트 값 알아내기
-		System.out.println(c & (1 << 1));// 10  > 2의 1승  ,
+		System.out.println("s"  + (c & (1 << 1)));// 10  > 2의 1승  ,
 		//즉 1번째 비트값이 켜져있다.
 		
 		System.out.println(bitCount(15));// 1111 총 4개
