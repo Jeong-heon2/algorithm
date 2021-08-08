@@ -2,7 +2,6 @@ package implementation;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
@@ -41,21 +40,7 @@ public class Q17143 {
 		System.out.println(ans);
 		
 	}
-	//µð¹ö±×¿ë 
-	private static void printSea() {
-		for(int i = 1;  i <= r;  i++) {
-			for(int j = 1; j <= c ; j++) {
-				if(!map[i][j].pq.isEmpty()) {
-					Shark shark = map[i][j].pq.peek();
-					System.out.print("s");
-				}else {
-					System.out.print("x");
-				}
-			}
-			System.out.println();
-		}
-		System.out.println();
-	}
+
 	//³¬½Ã¿ÕÀÌ ÇÑ Ä­ ¿òÁ÷ÀÎ´Ù 
 	private static void move() {
 		pos++;
