@@ -31,7 +31,6 @@ public class Q17143 {
 			map[Integer.parseInt(st.nextToken())][Integer.parseInt(st.nextToken())].pq.offer(
 					new Shark(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()), 0));
 		}
-		printSea();
 		while(pos < c) {
 			move();
 			fishing();
@@ -67,7 +66,6 @@ public class Q17143 {
 			if(!map[j][pos].pq.isEmpty()) {
 				Shark shark = map[j][pos].pq.poll();
 				ans += shark.z;
-				printSea();
 				return;
 			}
 		}
@@ -81,7 +79,6 @@ public class Q17143 {
 						if(shark.c != pos) {
 							movingSharkProcess(i,j, shark);
 							map[i][j].pq.remove(shark);
-							printSea();
 						}
 					}
 				}
@@ -114,7 +111,7 @@ public class Q17143 {
 				case 3:{
 					x++;
 					if(x == c+1) {
-						x = x-1;
+						x = c-1;
 						shark.d = 4;
 					}
 					
@@ -143,7 +140,6 @@ public class Q17143 {
 					Shark bigShark = map[i][j].pq.poll();
 					map[i][j].pq.clear();
 					map[i][j].pq.offer(bigShark);
-					printSea();
 				}
 			}
 		}
@@ -166,15 +162,6 @@ public class Q17143 {
 		public int compareTo(Shark o) {
 			return o.z - this.z;
 		}
-		
-	}
-	class Element{
-		String tagName;
-		HashMap<String, HashMap<String, Element>> childs;
-		Element(){
-			
-		}
-		
 		
 	}
 
