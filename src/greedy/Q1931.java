@@ -29,16 +29,11 @@ public class Q1931 {
 		}
 		Arrays.sort(meetings);
 		//정렬하고 앞에서 부터 읽어나간다. 
-		//세 가지 경우 
-		//1. 다음 미팅의 끝나는 시간이  현재 미팅 보다 앞 -> 다음 미팅을 선택하는 것이 더 좋음 
-		//2. 다음 미팅 시작시간이  현재 미팅 끝나는 시간 이후 -> 회의실 사용 가능 
-		//3. 다음 미팅 시작시간이 현재 미팅 끝나는 시간 이전 ->회의실 사용 불가 
+		//가장 먼저 끝나는 회의실을 배정. 
 		Meeting curr = meetings[0];
 		int cnt = 1;
 		for(int i = 1 ; i < N ; i++) {
-			if(meetings[i].e < curr.e) {
-				curr = meetings[i];
-			}else if (meetings[i].s >= curr.e) {
+			if(meetings[i].s >= curr.e) {
 				curr = meetings[i];
 				cnt++;
 			}
@@ -53,10 +48,15 @@ public class Q1931 {
 			this.s = s;
 			this.e = e;
 		}
-		//시작 시간 오름차순 정렬 
+		//끝 시간 오름차순 정렬 
+		//끝 나는 시간이 같으면  시작시간이 이른 순서로 정렬 
 		@Override
 		public int compareTo(Meeting o) {
-			return this.s - o.s;
+			if(this.e - o.e >0) return 1;
+			else if(this.e == o.e ) {
+				return this.s - o.s;
+			}
+			else return -1;
 		}
 	}
 }
